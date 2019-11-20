@@ -43,5 +43,13 @@ Route::prefix('admin')->group(function () {
         Route::get('/category/delete/{id}','CategoryController@delete_category')->name('delete.category');
 
 
+
+        #Users Route
+        Route::get('/user/add','UserController@add_data')->name('user.add');
+        Route::post('/user/store','UserController@insert')->name('user.store');
+        Route::get('/user','UserController@get_data')->name('user.table');
+        Route::get('/user/delete/{id}','UserController@delete_user')->name('delete.user');
+
+
 });
 });

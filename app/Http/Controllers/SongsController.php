@@ -36,6 +36,7 @@ class SongsController extends Controller
             $path = $file->storeAs('public/upload_images/', $fileNameToStore);
             $file= new SongsModel;
             $file->category_id=$request->category;
+            $file->artist=$request->name;
             $file->song_url=$fileNameToStore;
             $file->save();
         }

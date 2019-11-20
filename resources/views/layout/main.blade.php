@@ -88,6 +88,8 @@
                     <li><a href="{{route('song.add')}}"><span class="ti-angle-double-up pr-2"></span> Upload Song</a></li>
 
                         <li><a href="{{route('song.table')}}"><span class="ti-headphone-alt pr-2"></span> Songs List</a></li>
+                        <li><a href="{{route('user.add')}}"><span class="ti-stamp pr-2"></span> Create User</a></li>
+                    <li><a href="{{route('user.table')}}"><span class="ti-face-smile pr-2"></span> Users List</a></li>
 
                     </div>
             </nav>
@@ -112,6 +114,7 @@
         <script src="{{asset('/js/plugins.min.js')}}"></script>
 
         <script src="{{asset('/js/common.js')}}"></script>
+        @yield('scripts')
     </body>
 
 <!-- Mirrored from html.designstream.co.in/redial/style1/dark/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Nov 2019 06:04:41 GMT -->

@@ -16,6 +16,7 @@
                                             <tr>
                                                 <th>Song Name</th>
                                                 <th>Category Name</th>
+                                                <th>Artist Name</th>
                                                 <th>Song_Url</th>
                                                 <th>Action</th>
 
@@ -26,6 +27,7 @@
                                             <tr>
                                             <td>{{$song->song_url}}</td>
                                             <td>{{$song->category->name}}</td>
+                                            <td>{{$song->artist}}</td>
                                             <td>
                                                     <audio controls>
                                                             <source src="{{asset('/storage/upload_images/'.$song->song_url) }}" type="audio/ogg">

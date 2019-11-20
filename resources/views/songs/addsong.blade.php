@@ -15,6 +15,10 @@
                     </select>
                 </div>
                 <div class="form-group">
+                    <label class="redial-font-weight-600">Artist Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Artist Name" name="name" />
+                </div>
+                <div class="form-group">
                         <label class="redial-font-weight-600 d-block">File Input</label>
                         <input type="file" name="file[]" multiple='true' class="form-control">
                     </div>
