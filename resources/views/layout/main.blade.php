@@ -48,7 +48,7 @@
                                             <img src="{{asset('/images/author.jpg')}}" alt="" class="d-flex mr-3 img-fluid redial-rounded-circle-50" width="45" />
                                             <div class="media-body align-self-center">
                                                 <p class="mb-2 text-white text-uppercase font-weight-bold">Admin</p>
-                                                <small class="redial-primary-light font-weight-bold text-white"> Admin </small>
+
                                             </div>
                                         </div>
                                     </a>
@@ -82,6 +82,7 @@
         <!-- main-content-->
         <div class="wrapper">
             <nav id="sidebar" class="card redial-border-light px-2 mb-4">
+                @if(auth()->user()->roll == 1)
                 <div class="sidebar-scrollarea">
                     <ul class="metismenu list-unstyled mb-0" id="menu">
                             <li><a href="{{route('category.table')}}"><span class="ti-shield pr-2"></span>  Category</a></li>
@@ -92,7 +93,11 @@
                     <li><a href="{{route('user.table')}}"><span class="ti-face-smile pr-2"></span> Users List</a></li>
 
                     </div>
-            </nav>
+                    @else
+                    <li><a href="{{route('song.table')}}"><span class="ti-headphone-alt pr-2"></span> Songs List</a></li>
+                    @endif
+                </nav>
+
             <div id="content">
                 @yield('content')
             </div>

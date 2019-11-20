@@ -14,8 +14,8 @@
 
                                         <thead>
                                             <tr>
+                                                <th class="text-center">User Name</th>
                                                 <th class="text-center">User Email</th>
-
                                                 <th class="text-center">Action</th>
 
                                             </tr>
@@ -23,11 +23,14 @@
                                         <tbody>
                                             @foreach($users as $user)
                                             <tr>
+                                                @if($user->roll == 2)
+                                            <td class="text-center">{{$user->name}}</td>
                                             <td class="text-center">{{$user->email}}</td>
                                                 <td class="text-center">
 
                                                 <a href="{{route('delete.user',['id'=>$user->id])}}" class="btn btn-danger bg-dark"><i class="fa fa-trash"></i></a>
                                                 </td>
+                                                @endif
                                             </tr>
                                             @endforeach
                                         </tbody>

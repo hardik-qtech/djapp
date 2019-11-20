@@ -8,6 +8,10 @@
                             <form method="POST" action="{{route('user.store')}}">
                                                 {{csrf_field()}}
                                                 <div class="form-group">
+                                                    <label class="redial-font-weight-600">Name</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Name" name="name" required/>
+                                                </div>
+                                                <div class="form-group">
                                                     <label class="redial-font-weight-600">Email</label>
                                                     <input type="text" class="form-control" placeholder="Enter Email" name="email" required/>
                                                 </div>
