@@ -11,8 +11,8 @@
                                     <h6 class="header-title pl-3 redial-relative">Songs List
                                             <div class="form-group col-md-3">
                                                     <label class="redial-font-weight-600">Select</label>
-                                                    <select class="form-control">
-                                                        <option id="songs">Select To Search</option>
+                                                    <select class="form-control" id="category">
+                                                        <option value="">Select Category</option>
                                                             @foreach($categories as $category)
                                                             <option value="{{ $category->category_id }}">{{ $category->name }}
                                                             </option>
@@ -32,25 +32,25 @@
 
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                                @foreach($songs as $song)
+                                        <tbody id="songs_data">
+                                                {{-- @foreach($songs as $song)
                                             <tr>
                                             <td>{{$song->song_url}}</td>
                                             <td>{{$song->category->name}}</td>
                                             <td>{{$song->artist}}</td>
                                             <td>
-                                                    <audio controls>
-                                                            <source src="{{asset('/storage/upload_images/'.$song->song_url) }}" type="audio/ogg">
-                                                                    <source src="/upload_images/{{$song->song_url}}" type="audio/mpeg">
-                                                                    Your browser does not support the audio element.
-                                                                  </audio>
+                                                <audio controls>
+                                                    <source src="{{asset('/storage/upload_images/'.$song->song_url) }}" type="audio/ogg">
+                                                    <source src="/upload_images/{{$song->song_url}}" type="audio/mpeg">
+                                                    Your browser does not support the audio element.
+                                                </audio>
                                             </td>
                                                 <td class="text-center">
                                                 <a href="{{route('edit.song',['id'=>$song->song_id])}}"  class="btn btn-success bg-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                                 <a href="{{route('delete.song',['id'=>$song->song_id])}}" class="btn btn-danger bg-dark"><i class="fa fa-trash"></i></a>
                                                 </td>
                                             </tr>
-                                                @endforeach
+                                                @endforeach --}}
                                         </tbody>
                                     </table>
                                 </div>
@@ -65,6 +65,18 @@
 @endsection
 @section('scripts')
 <script type="text/javascript">
+    $("#category").on("change", function(){
+        let category_id = this.value;
+        $.get( "http://localhost/DjApp/api/category_songs?category_id="+category_id, function( data ) {
+            if(data.status == 1){
+                $.each(data.data, function( index, value ) {
 
-  </script>
+                });
+            }
+            else{
+                alert("No songs available in this category");
+            }
+        });
+    });
+</script>
 @endsection

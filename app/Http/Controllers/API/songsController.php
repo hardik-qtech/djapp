@@ -10,11 +10,12 @@ class songsController extends Controller
 {
     public function get_songs(Request $request)
     {
-        $songs=SongsModel::all();
+        $songs=SongsModel::where('category_id', $request->category_id)->get();
+
         if(count($songs)>0)
         {
            return [
-            'msg'=>'All Songs list',
+            'msg'=>'List of category songs',
             'status'=>1,
             'data'=>$songs
            ];

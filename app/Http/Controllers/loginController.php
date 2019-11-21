@@ -27,7 +27,7 @@ class loginController extends Controller
 
                 if ($check_email) {
                     if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                        return redirect()->route('admin.home');
+                        return redirect()->route('song.table');
                     } else {
                         return redirect()->route('loginpage');
                     }
