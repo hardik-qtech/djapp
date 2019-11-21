@@ -505,10 +505,10 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   border: 1px solid #949ba2; }
 
 .header {
-  background-color: #24262d; }
+  background-color: darkslateblue; }
 
 #header-fix.active {
-  background-color: #24262d;
+  background-color: darkslateblue;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   transition: 0.3s; }
 
@@ -638,8 +638,8 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 #sidebar.active {
   margin-left: -250px; }
 
-/*===  
-    1. Accordian Css 
+/*===
+    1. Accordian Css
     2. Form Css
     3. Breadcrumb Css
     4. Counter Css

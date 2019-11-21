@@ -51,7 +51,12 @@ class SongsController extends Controller
     public function get_data()
     {
         $songs=SongsModel::all();
-        return view('songs.table')->with('songs',$songs);
+        $categories=CategoryModel::all();
+        $data=[
+            'songs'=>$songs,
+            'categories'=>$categories
+        ];
+        return view('songs.table')->with($data);
     }
     public function edit_song($id)
     {
@@ -73,6 +78,7 @@ class SongsController extends Controller
             $song->song_url = $fileNameToStore;
         }
         $song->category_id=$request->category1;
+        $song->artist=$request->name;
         $song->save();
         return redirect()->route('song.table');
 

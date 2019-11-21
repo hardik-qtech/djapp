@@ -14,6 +14,10 @@
                     @endforeach
                 </select>
             </div>
+            <div class="form-group">
+                    <label class="redial-font-weight-600">Artist Name</label>
+            <input type="text" class="form-control" placeholder="Enter Artist Name" name="name"  value="{{$songs->artist}}"/>
+                </div>
 
                 <div class="form-group">
                         <label class="redial-font-weight-600 d-block">Song url</label>

@@ -7,8 +7,18 @@
                         <div class="col-12 col-md-12">
                             <div class="card redial-border-light redial-shadow mb-4">
                                 <div class="card-body">
-                                    <h6 class="header-title pl-3 redial-relative">Songs List
 
+                                    <h6 class="header-title pl-3 redial-relative">Songs List
+                                            <div class="form-group col-md-3">
+                                                    <label class="redial-font-weight-600">Select</label>
+                                                    <select class="form-control">
+                                                        <option id="songs">Select To Search</option>
+                                                            @foreach($categories as $category)
+                                                            <option value="{{ $category->category_id }}">{{ $category->name }}
+                                                            </option>
+                                                            @endforeach
+                                                    </select>
+                                                </div>
                                     </h6>
                                     <table id="example" class="table table-bordered" cellspacing="0" width="100%">
 
@@ -52,4 +62,9 @@
 </div>
 
 
+@endsection
+@section('scripts')
+<script type="text/javascript">
+
+  </script>
 @endsection

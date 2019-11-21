@@ -18,7 +18,7 @@ class UserController extends Controller
         $user->email=$request->email;
         $user->password=bcrypt($request->password);
         $user->save();
-        return view('users.add');
+        return redirect()->route('user.table');
     }
     public function table()
     {
