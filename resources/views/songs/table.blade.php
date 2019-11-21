@@ -8,8 +8,12 @@
                             <div class="card redial-border-light redial-shadow mb-4">
                                 <div class="card-body">
 
-                                    <h6 class="header-title pl-3 redial-relative">Songs List
-                                            <div class="form-group col-md-3">
+                                    <h6 class="header-title pl-3 redial-relative">Songs List  </h6>
+                                            <div class="form-group col-md-3 ">
+                                                    <label class="redial-font-weight-600">Artist</label>
+                                                    <input type="text" class="form-control" id="artist">
+                                                </div>
+                                            <div class="form-group col-md-3 ">
                                                     <label class="redial-font-weight-600">Select</label>
                                                     <select class="form-control" id="category">
                                                         <option value="">Select Category</option>
@@ -19,7 +23,7 @@
                                                             @endforeach
                                                     </select>
                                                 </div>
-                                    </h6>
+
                                     <table id="example" class="table table-bordered" cellspacing="0" width="100%">
 
                                         <thead>
@@ -95,4 +99,59 @@
         });
     });
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $.get("http://localhost/DjApp/api/songs", function( data ) {
+        document.getElementById("songs_data").innerHTML = "";
+        $.each(data.data, function( index, value ) {
+                    document.getElementById("songs_data").innerHTML +=
+                    `<tr>
+                        <td class="text-center">${value.song_url}</td>
+                        <td class="text-center">${value.category.name}</td>
+                        <td class="text-center">${value.artist}</td>
+                        <td class="text-center"> <audio controls>
+                        <source src="/DjApp/storage/upload_images/'.${value.song_url}" type="audio/ogg">
+                        <source src="/DjApp/storage/upload_images/${value.song_url}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                        <td class="text-center"><a href="http://localhost/DjApp/admin/song/edit/${value.song_id}"  class="btn btn-success bg-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+                            <a href="http://localhost/DjApp/admin/song/delete/${value.song_id}" class="btn btn-danger bg-dark"><i class="fa fa-trash aria-hidden="true""></i></a>
+                        </td>
+                    </tr>`;
+
+    });
+
+});
+});
+    </script>
+    <script type="text/javascript">
+
+  $("#artist").on("keydown", function(){
+        let artist = this.value;
+            $.get("http://localhost/DjApp/api/allartist?artist="+artist, function( data ) {
+
+                                if(data.status == 1){
+                                    document.getElementById("artist").innerHTML = "";
+                                    $.each(data.data, function( index, value ) {
+                                        document.getElementById("artist").innerHTML +=
+                                `<ul>
+                                        <li>${value.artist}</li>
+                                        </ul>
+                                `;
+
+                                    });
+                                }
+                                else
+                                {
+                                    alert('No Artist here to display');
+                                }
+
+                });
+
+    });
+
+
+        </script>
 @endsection

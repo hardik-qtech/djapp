@@ -14,3 +14,6 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/category_songs','API\songsController@get_songs');
+Route::get('/songs','API\songsController@all_songs');
+Route::get('/allartist','API\songsController@artists');
+

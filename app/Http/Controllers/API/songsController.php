@@ -28,4 +28,47 @@ class songsController extends Controller
             ];
         }
     }
+
+
+    public function all_songs(Request $request)
+    {
+        $allsongs=SongsModel::with('category')->get();
+
+        if(count($allsongs)>0)
+        {
+            return[
+                'msg'=>'List Of All Songs',
+                'status'=>1,
+                'data'=>$allsongs
+            ];
+        }
+        else
+        {
+            return[
+                'msg'=>'No Song Available',
+                'status'=>0
+            ];
+        }
+    }
+    public function artists(Request $request)
+    {
+        $artist=SongsModel::with('category')->where('artist',$request->artist)->get();
+
+        if(count($artist)>0)
+        {
+            return [
+                'msg'=>'list of artist',
+                'status'=>1,
+                'data'=>$artist
+            ];
+        }
+        else
+        {
+            return [
+                'msg'=>'No Artist Available',
+                'status'=>0
+            ];
+        }
+
+    }
 }
