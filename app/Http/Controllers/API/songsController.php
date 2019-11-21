@@ -10,7 +10,7 @@ class songsController extends Controller
 {
     public function get_songs(Request $request)
     {
-        $songs=SongsModel::where('category_id', $request->category_id)->get();
+        $songs=SongsModel::with('category')->where('category_id', $request->category_id)->get();
 
         if(count($songs)>0)
         {

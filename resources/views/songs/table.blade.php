@@ -67,10 +67,26 @@
 <script type="text/javascript">
     $("#category").on("change", function(){
         let category_id = this.value;
+
         $.get( "http://localhost/DjApp/api/category_songs?category_id="+category_id, function( data ) {
             if(data.status == 1){
+                document.getElementById("songs_data").innerHTML = "";
                 $.each(data.data, function( index, value ) {
+                    document.getElementById("songs_data").innerHTML +=
+                    `<tr>
+                        <td>${value.song_url}</td>
+                        <td>${value.category.name}</td>
+                        <td>${value.artist}</td>
+                        <td> <audio controls>
+                        <source src="/DjApp/storage/upload_images/'.${value.song_url}" type="audio/ogg">
+                        <source src="/DjApp/storage/upload_images/${value.song_url}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio></td>
+                        <td><a href="http://localhost/DjApp/admin/song/edit/${value.song_id}"  class="btn btn-success bg-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
+                            <a href="http://localhost/DjApp/admin/song/delete/${value.song_id}" class="btn btn-danger bg-dark"><i class="fa fa-trash aria-hidden="true""></i></a>
+                        </td>
+                    </tr>`;
                 });
             }
             else{
