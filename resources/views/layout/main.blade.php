@@ -41,22 +41,7 @@
                         <nav class="navbar navbar-expand-lg p-0">
                             <ul class="navbar-nav notification ml-auto d-inline-flex">
 
-                                <li class="nav-item dropdown user-profile align-self-center">
-                                    <a  class="nav-link" data-toggle="dropdown" aria-expanded="false">
-                                        <span class="float-right pl-3 text-white"><i class="fa fa-angle-down"></i></span>
-                                        <div class="media">
-                                            <img src="{{asset('/images/author.jpg')}}" alt="" class="d-flex mr-3 img-fluid redial-rounded-circle-50" width="45" />
-                                            <div class="media-body align-self-center">
-                                                <p class="mb-2 text-white text-uppercase font-weight-bold">Admin</p>
-
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <ul class="dropdown-menu border-bottom-0 rounded-0 py-0">
-
-                                    <li><a class="dropdown-item py-2" href="{{route('logout')}}"><i class="fa fa-sign-out pr-2"></i> logout</a></li>
-                                    </ul>
-                                </li>
+                                <a href="{{route('logout')}}" class="btn btn-danger float-right mt-3">Logout</a>
                             </ul>
                         </nav>
                     </div>
@@ -99,6 +84,7 @@
                 </nav>
 
             <div id="content">
+                    @include('alert.alert')
                 @yield('content')
             </div>
         </div>

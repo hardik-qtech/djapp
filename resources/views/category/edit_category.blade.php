@@ -11,7 +11,7 @@
                 <input type="text" class="form-control" placeholder="Enter name" name="name" value="{{$category->name}}" />
                 </div>
 
-                    <button class="btn btn-success">Update Category</button>
+                    <button class="btn btn-primary">Update Category</button>
 
             </form>
         </div>

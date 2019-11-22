@@ -18,7 +18,7 @@ class UserController extends Controller
         $user->email=$request->email;
         $user->password=bcrypt($request->password);
         $user->save();
-        return redirect()->route('user.table');
+        return redirect()->route('user.table')->with('success','User created Successfully');
     }
     public function table()
     {
@@ -32,6 +32,6 @@ class UserController extends Controller
     public function delete_user($id)
     {
         User::find($id)->delete();
-        return redirect()->route('user.table');
+        return redirect()->route('user.table')->with('success','User Deleted Successfully');
     }
 }

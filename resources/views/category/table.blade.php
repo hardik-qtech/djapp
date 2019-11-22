@@ -25,8 +25,8 @@
                                             <tr>
                                             <td class="text-center">{{$category->name}}</td>
                                                 <td class="text-center">
-                                                <a href="{{route('edit.category',['id'=>$category->category_id])}}"  class="btn btn-success bg-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                <a href="{{route('delete.category',['id'=>$category->category_id])}}" class="btn btn-danger bg-dark"><i class="fa fa-trash"></i></a>
+                                                <a href="{{route('edit.category',['id'=>$category->category_id])}}"  class="btn btn-success "><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                                <a href="{{route('delete.category',['id'=>$category->category_id])}}" class="btn btn-danger "><i class="fa fa-trash"></i></a>
                                                 </td>
                                             </tr>
                                             @endforeach

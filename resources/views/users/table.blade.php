@@ -28,7 +28,7 @@
                                             <td class="text-center">{{$user->email}}</td>
                                                 <td class="text-center">
 
-                                                <a href="{{route('delete.user',['id'=>$user->id])}}" class="btn btn-danger bg-dark"><i class="fa fa-trash"></i></a>
+                                                <a href="{{route('delete.user',['id'=>$user->id])}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                                 </td>
                                                 @endif
                                             </tr>

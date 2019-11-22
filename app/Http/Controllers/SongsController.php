@@ -42,7 +42,7 @@ class SongsController extends Controller
         }
 
 
-        return redirect()->route('song.table');
+        return redirect()->route('song.table')->with('success','Song Added Successfully');
     }
     public function table()
     {
@@ -80,12 +80,12 @@ class SongsController extends Controller
         $song->category_id=$request->category1;
         $song->artist=$request->name;
         $song->save();
-        return redirect()->route('song.table');
+        return redirect()->route('song.table')->with('success','Song Updated Successfully');
 
     }
     public function delete_song($id)
     {
         SongsModel::find($id)->delete();
-        return redirect()->route('song.table');
+        return redirect()->route('song.table')->with('success','Song Deleted Successfully');
     }
 }

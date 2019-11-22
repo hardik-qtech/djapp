@@ -24,7 +24,8 @@
                     <div class="col-12 col-xl-4">
                         <div class="card">
                             <div class="card-body text-center">
-                                <h4 class="mb-0 redial-font-weight-400">Admin Sign In</h4>
+                                <h4 class="mb-0 redial-font-weight-400">Sign In</h4>
+                                @include('alert.alert')
                             </div>
                             <div class="redial-divider"></div>
                             <div class="card-body py-4 text-center">

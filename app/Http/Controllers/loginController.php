@@ -29,10 +29,10 @@ class loginController extends Controller
                     if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
                         return redirect()->route('song.table');
                     } else {
-                        return redirect()->route('loginpage');
+                        return redirect()->route('loginpage')->with('error','Invalid Credentials');
                     }
                 } else {
-                    return redirect()->route('loginpage');
+                    return redirect()->route('loginpage')->with('error','No Email Such Exits');
                 }
             }
         } catch (\Exception $e) {

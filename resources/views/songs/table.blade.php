@@ -80,9 +80,9 @@
                     <source src="/DjApp/storage/upload_images/${value.song_url}" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio></td>
-                    <td class="text-center"><a href="http://localhost/DjApp/admin/song/edit/${value.song_id}"  class="btn btn-success bg-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <td class="text-center"><a href="http://localhost/DjApp/admin/song/edit/${value.song_id}"  class="btn btn-success "><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
-                        <a href="http://localhost/DjApp/admin/song/delete/${value.song_id}" class="btn btn-danger bg-dark"><i class="fa fa-trash aria-hidden="true""></i></a>
+                        <a href="http://localhost/DjApp/admin/song/delete/${value.song_id}" class="btn btn-danger "><i class="fa fa-trash aria-hidden="true""></i></a>
                     </td>
                 </tr>`;
             });
@@ -106,9 +106,9 @@
                             <source src="/DjApp/storage/upload_images/${value.song_url}" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio></td>
-                            <td><a href="http://localhost/DjApp/admin/song/edit/${value.song_id}"  class="btn btn-success bg-dark"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <td><a href="http://localhost/DjApp/admin/song/edit/${value.song_id}"  class="btn btn-success "><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
-                                <a href="http://localhost/DjApp/admin/song/delete/${value.song_id}" class="btn btn-danger bg-dark"><i class="fa fa-trash aria-hidden="true""></i></a>
+                                <a href="http://localhost/DjApp/admin/song/delete/${value.song_id}" class="btn btn-danger"><i class="fa fa-trash aria-hidden="true""></i></a>
                             </td>
                         </tr>`;
                     });

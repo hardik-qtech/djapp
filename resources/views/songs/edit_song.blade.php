@@ -23,7 +23,7 @@
                         <label class="redial-font-weight-600 d-block">Song url</label>
                 <input type="file" name="file" class="form-control" value="{{$songs->song_url}}">
                     </div>
-                    <button class="btn btn-success">Update Song</button>
+                    <button class="btn btn-primary">Update Song</button>
 
             </form>
         </div>
