@@ -19,7 +19,7 @@
                                                     <label class="redial-font-weight-600">Password</label>
                                                     <input type="password" class="form-control" placeholder="Password" name="password" required/>
                                                 </div>
-                                                <button class="btn btn-success">Create User</button>
+                                                <button class="btn btn-primary">Create User</button>
 
                                         </form>
                             </div>

@@ -12,7 +12,7 @@
                     <input type="text" class="form-control" placeholder="Enter name" name="name" />
                 </div>
 
-                    <button class="btn btn-success">Add Category</button>
+                    <button class="btn btn-primary">Add Category</button>
 
             </form>
         </div>

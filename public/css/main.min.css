@@ -6,10 +6,10 @@
 /*-----------------------Font Family Import------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
 body {
-  background: #2f323b;
+  background: #f6fafb;
   margin: 0px;
   padding: 0px;
-  color: #949ba2;
+  color: #676767;
   font-family: "Lato", sans-serif;
   font-size: 0.875rem;
   line-height: 1.75rem; }
@@ -23,7 +23,7 @@ a {
 
 /*======================== Font Style Css ===============================*/
 h1, h2, h3, h4, h5, h6 {
-  color: #c0c4c8;
+  color: #333;
   margin: 0 0 15px;
   line-height: 1.75rem;
   font-weight: 700; }
@@ -49,16 +49,16 @@ h5 {
 
 /*======================== Font-Color Css ===============================*/
 .redial-primary, .text-primary {
-  color: #949ba2 !important; }
+  color: #2e5aef !important; }
 
 .redial-primary-light {
   color: #7c99d6; }
 
 .redial-dark {
-  color: #c0c4c8; }
+  color: #333; }
 
 .redial-light {
-  color: #949ba2; }
+  color: #676767; }
 
 .redial-cyan {
   color: #06c8e3; }
@@ -85,17 +85,14 @@ h5 {
   color: #3fbcef; }
 
 /*======================== Background Color Css ===============================*/
-.redial-bg-primary, .modal-content {
-  background-color: #24262d; }
-
-.card {
-  background-color: rgba(68, 70, 79, 0.5); }
+.redial-bg-primary {
+  background-color: #2e5aef; }
 
 .redial-bg-secondry {
-  background-color: #2f323b; }
+  background-color: #f6fafb; }
 
 .redial-bg-secondry-light {
-  background-color: #353842; }
+  background-color: #f5f5f5; }
 
 .redial-bg-pink {
   background-color: #e0276a; }
@@ -180,31 +177,24 @@ h5 {
 .redial-letter-spacing-10 {
   letter-spacing: 10px; }
 
-.border {
-  border: 1px solid #3d404c; }
-
-.border {
-  border-color: #3d404c !important; }
-
 /*======================== Button Css===============================*/
 .btn {
   font-size: 0.875rem;
-  font-weight: 700;
-  color: #fff; }
+  font-weight: 700; }
   .btn:focus, .btn:active {
     box-shadow: none !important; }
 
 .btn-primary {
-  background-color: #24262d;
-  border-color: #24262d; }
+  background-color: #2e5aef;
+  border-color: #2e5aef; }
 
 .btn-outline-primary {
-  border-color: #949ba2;
-  color: #949ba2; }
+  border-color: #2e5aef;
+  color: #2e5aef; }
 
 .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:focus, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-  background-color: #24262d !important;
-  border-color: #24262d !important;
+  background-color: #2e5aef !important;
+  border-color: #2e5aef !important;
   color: #fff !important; }
 
 .btn-success:hover, .btn-success:active, .btn-success:focus, .btn-info:hover, .btn-info:active, .btn-info:focus, .btn-danger:hover, .btn-danger:active, .btn-danger:focus, .btn-warning:hover, .btn-warning:active, .btn-warning:focus, .btn-dark:hover, .btn-dark:active, .btn-dark:focus, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
@@ -220,14 +210,14 @@ h5 {
 .btn-white {
   border-color: #fff;
   background-color: #fff;
-  color: #c0c4c8; }
+  color: #333; }
   .btn-white:hover, .btn-white:active, .btn-white:focus {
     border-color: #fff;
     background-color: #fff;
-    color: #c0c4c8 !important; }
+    color: #333 !important; }
 
 .btn-link {
-  color: #949ba2 !important; }
+  color: #2e5aef !important; }
 
 /*======================== Buttons Size===============================*/
 .btn-xs {
@@ -268,7 +258,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-color: #c0c4c8; }
+  background-color: #333; }
 
 /*======================== Overlay-Maker & Gradient Css ===============================*/
 .redial-overlay {
@@ -336,10 +326,10 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 /*======================== Border Color Css===============================*/
 .redial-border-light {
-  border-color: #3d404c !important; }
+  border-color: #e6e6e6 !important; }
 
 .redial-border-primary {
-  border-color: #949ba2; }
+  border-color: #2e5aef; }
 
 .redial-border-pink {
   border-color: #e0276a; }
@@ -363,23 +353,23 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   border-color: #e44b88 !important; }
 
 .redial-divider {
-  border-bottom: solid 1px #3d404c; }
+  border-bottom: solid 1px #e6e6e6; }
 
 .redial-divider-dashed {
-  border-bottom: dashed 1px #3d404c; }
+  border-bottom: dashed 1px #e6e6e6; }
 
 .redial-brd-right {
-  border-right: solid 1px #3d404c; }
+  border-right: solid 1px #e6e6e6; }
 
 .redial-primary-dark {
-  border: solid 1px #949ba2; }
+  border: solid 1px #2f55bb; }
 
 .redial-border-top {
   border-top: solid 1px; }
 
 /*======================== Box Shadow Css===============================*/
 .redial-shadow {
-  box-shadow: 0px 0px 38px 0px rgba(255, 255, 255, 0); }
+  box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.11); }
 
 .redial-shadow2 {
   box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.9); }
@@ -467,12 +457,12 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   height: 100vh;
   top: 0px;
   right: 0px;
-  background: #24262d;
+  background: #fff;
   z-index: 10000;
   margin-right: -300px;
   transition: all 0.3s;
   box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.11);
-  border-left: 5px solid #24262d; }
+  border-left: 5px solid #2e5aef; }
 
 #sidechat.active .sidbarchat {
   margin-right: 0px; }
@@ -480,35 +470,11 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 #sidechat.active .setting {
   right: 300px; }
 
-.select2-drop, .select2-drop.select2-drop-above .select2-search input, .select2-container .select2-choice, .select2-container-multi .select2-choices .select2-search-field input,
-.dropdown-menu, .page-link, .calendar-date-holder .calendar-dates .date.selected a, .date a:hover {
-  background: #24262d;
-  color: #949ba2; }
-
-.date a:hover {
-  background-color: #24262d !important; }
-
-.sweet-alert {
-  background: #000;
-  color: #949ba2; }
-
-.dropdown-divider {
-  border-top: solid 1px #3d404c;
-  display: none; }
-
-.paginate_button {
-  padding: .5rem .75rem;
-  margin-left: -1px;
-  line-height: 1.25;
-  color: #949ba2;
-  background-color: #24262d;
-  border: 1px solid #949ba2; }
-
 .header {
-  background-color: darkslateblue; }
+  background-color: #2e5aef; }
 
 #header-fix.active {
-  background-color: darkslateblue;
+  background-color: #2e5aef;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   transition: 0.3s; }
 
@@ -521,7 +487,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   left: auto;
   min-width: 280px;
   margin-top: 8px;
-  background-color: #24262d;
+  background-color: #2e5aef;
   border: 0;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
@@ -534,12 +500,12 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   -ms-transform-origin: right 0;
   transform-origin: right 0; }
   .notification .dropdown-menu .dropdown-item {
-    border-bottom: solid 1px #3d404c;
+    border-bottom: solid 1px #3a64f2;
     color: #fff; }
     .notification .dropdown-menu .dropdown-item h6, .notification .dropdown-menu .dropdown-item small {
       color: #fff; }
     .notification .dropdown-menu .dropdown-item:hover, .notification .dropdown-menu .dropdown-item:focus, .notification .dropdown-menu .dropdown-item:active {
-      background-color: #2f323b;
+      background-color: #466ef7;
       color: #fff; }
 
 .notification .dropdown-menu.show {
@@ -613,10 +579,11 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     .wrapper #sidebar a {
       padding: 10px;
       display: block;
-      color: #c0c4c8;
+      color: #15236d;
       font-weight: 700; }
       .wrapper #sidebar a:hover {
-        color: #fff; }
+        color: #15236d;
+        background: #fff; }
   .wrapper .metismenu .has-arrow {
     position: relative; }
     .wrapper .metismenu .has-arrow:after {
@@ -638,8 +605,8 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 #sidebar.active {
   margin-left: -250px; }
 
-/*===
-    1. Accordian Css
+/*===  
+    1. Accordian Css 
     2. Form Css
     3. Breadcrumb Css
     4. Counter Css
@@ -675,7 +642,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 ===*/
 /*======================== Selection Css ===============================*/
 ::selection {
-  background-color: #24262d;
+  background-color: #2e5aef;
   color: #fff; }
 
 /*======================== Blockquote Css ===============================*/
@@ -713,17 +680,14 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 .form-control {
   height: 42px;
   border-radius: 0px;
-  border-color: #3d404c;
-  color: #949ba2;
+  border-color: #e6e6e6;
+  color: #676767;
   transition: .2s ease-out;
   padding: .5rem 1.2rem;
-  font-size: 0.875rem;
-  background: #24262d; }
+  font-size: 0.875rem; }
   .form-control:focus {
-    border-color: #3d404c;
-    box-shadow: none;
-    background: #2f323b;
-    color: #fff; }
+    border-color: #e6e6e6;
+    box-shadow: none; }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   transition: all 0.3s ease; }
@@ -758,7 +722,7 @@ select[multiple], select[size] {
 
 /*======================== Breadcrumb Css ===============================*/
 .breadcrumb .breadcrumb-item.active, .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-  color: #949ba2; }
+  color: #676767; }
 
 /*======================== Counter Css ===============================*/
 .fact-box1 .counter_number:after {
@@ -776,25 +740,24 @@ select[multiple], select[size] {
   left: 0px;
   width: 5px;
   height: 5px;
-  background: #949ba2;
+  background: #2e5aef;
   border-radius: 50px;
   top: 13px; }
 
 /*======================== Tabs Css ===============================*/
 .nav-tabs {
-  border-color: #3d404c; }
+  border-color: #e6e6e6; }
   .nav-tabs .nav-link {
     border-bottom: solid 2px transparent; }
     .nav-tabs .nav-link:hover {
       border-color: transparent; }
   .nav-tabs .nav-link.active {
-    color: #c0c4c8;
-    border-color: #c0c4c8;
-    font-weight: 600;
-    background: transparent; }
+    color: #333;
+    border-color: #2e5aef;
+    font-weight: 600; }
 
 .nav-pills .nav-link.active, .nav-pills .nav-link:hover, .nav-pills .show > .nav-link {
-  color: #c0c4c8 !important;
+  color: #333 !important;
   background-color: transparent; }
 
 .nav-pills .nav-item .nav-link:before {
@@ -803,7 +766,7 @@ select[multiple], select[size] {
   width: 1px;
   position: absolute;
   right: 0px;
-  background-color: #3d4150;
+  background-color: #e6e6e6;
   top: 0; }
 
 .nav-pills .nav-item:last-child .nav-link:before {
@@ -811,7 +774,7 @@ select[multiple], select[size] {
 
 /*======================== Editable Table Css ===============================*/
 .jsgrid-header-row th {
-  color: #949ba2 !important; }
+  color: #2e5aef !important; }
 
 /*======================== Timeline Css ===============================*/
 .timeline:after {
@@ -821,7 +784,7 @@ select[multiple], select[size] {
   top: 2px;
   width: 3px;
   height: 100%;
-  border-right: 3px solid #3d404c; }
+  border-right: 3px solid #e6e6e6; }
 
 .timeline-point:after {
   content: "";
@@ -830,7 +793,7 @@ select[multiple], select[size] {
   width: 11px;
   height: 11px;
   top: 38px;
-  background: #949ba2;
+  background: #3fbcef;
   border-radius: 50px;
   z-index: 1; }
 
@@ -870,7 +833,7 @@ select[multiple], select[size] {
   padding: 15px; }
 
 .scrollerchat .out .media-body {
-  background-color: #24262d;
+  background-color: #f8f7fd;
   border-top-left-radius: 0px !important;
   padding: 15px; }
 
@@ -902,7 +865,7 @@ select[multiple], select[size] {
   width: 10px;
   height: 17px;
   border-width: 2px;
-  border-color: transparent #949ba2 #949ba2 transparent;
+  border-color: transparent #2e5aef #2e5aef transparent;
   -webkit-transform: rotate(40deg);
   transform-origin: 100% 100%; }
 
@@ -911,7 +874,7 @@ select[multiple], select[size] {
 
 /*======================== Inbox Css ===============================*/
 .inbox a:hover .form-group, .inbox a:hover .text-muted, .inbox a:hover label.redial-dark {
-  background-color: #24262d;
+  background-color: #2e5aef;
   color: #fff !important; }
   .inbox a:hover .form-group [type=checkbox]:checked + label:before, .inbox a:hover .text-muted [type=checkbox]:checked + label:before, .inbox a:hover label.redial-dark [type=checkbox]:checked + label:before {
     border-color: transparent #fff #fff transparent; }
@@ -927,7 +890,7 @@ select[multiple], select[size] {
   vertical-align: middle; }
 
 .table td, .table th {
-  border-color: #3d404c !important; }
+  border-color: #e6e6e6 !important; }
 
 .table-dark td, .table-dark th {
   border-color: transparent !important; }
@@ -937,16 +900,16 @@ select[multiple], select[size] {
   background-color: #f2f2f2; }
 
 .table-hover tbody tr:hover {
-  background-color: #2f323b; }
+  background-color: #f6fafb; }
 
 .table-hover tbody th:hover {
-  border-color: #2f323b !important; }
+  border-color: #f6fafb !important; }
 
 .table thead td, .table thead th {
   border-bottom: 0px !important; }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #2f323b; }
+  background-color: #f6fafb; }
 
 /*======================== Progress Css ===============================*/
 .barfiller, .barfiller2 {
@@ -970,7 +933,7 @@ select[multiple], select[size] {
     left: 0px;
     position: absolute;
     z-index: 2;
-    background: #24262d; }
+    background: #2e5aef; }
 
 /*======================== Followers Css ===============================*/
 .redial-followers h5 {
@@ -981,7 +944,7 @@ select[multiple], select[size] {
 /*======================== Circle Process Css ===============================*/
 .circles-text {
   font-size: 20px !important;
-  color: #949ba2;
+  color: #2e5aef;
   font-weight: 700; }
 
 .circles-decimals {
@@ -1015,19 +978,19 @@ select[multiple], select[size] {
     left: -6px;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
-    border-right: 7px solid #24262d;
+    border-right: 7px solid #2e5aef;
     top: 11px; }
 
 /*========================  Map Css ===============================*/
 .percentCount {
   margin-top: -29px;
-  color: #c0c4c8;
+  color: #333;
   font-weight: 700; }
 
 .therm {
   height: 5px !important;
   border-radius: 5px;
-  background-color: #24262d !important; }
+  background-color: #2e5aef !important; }
   .therm .inner-therm {
     background-color: #00b034 !important; }
 
@@ -1038,7 +1001,7 @@ select[multiple], select[size] {
     top: -60px;
     width: 18px;
     height: 18px;
-    background: #24262d;
+    background: #2e5aef;
     text-align: center;
     line-height: 18px;
     color: #fff;
@@ -1071,8 +1034,8 @@ select[multiple], select[size] {
 .wizard .round-tab i, .wizard2 .round-tab i {
   width: 50px;
   height: 50px;
-  background-color: #24262d;
-  border: 2px solid #24262d;
+  background-color: #333;
+  border: 2px solid #333;
   font-size: 1.25rem;
   line-height: 45px;
   text-align: center !important;
@@ -1081,16 +1044,16 @@ select[multiple], select[size] {
   margin-bottom: 18px !important; }
 
 .wizard .nav-link:hover, .wizard2 .nav-link:hover {
-  color: #c0c4c8 !important; }
+  color: #333 !important; }
 
 .wizard .nav-link.active i, .wizard2 .nav-link.active i {
-  background-color: #000;
-  border-color: #24262d;
-  color: #fff !important; }
+  background-color: #fff;
+  border-color: #2e5aef;
+  color: #2e5aef !important; }
 
 .wizard .connecting-line, .wizard2 .connecting-line {
   height: 2px;
-  background: #c0c4c8;
+  background: #333;
   position: absolute;
   width: 99%;
   margin: 0 auto;
@@ -1100,14 +1063,14 @@ select[multiple], select[size] {
   z-index: 1; }
 
 .wizard2 .round-tab i {
-  background-color: #24262d;
-  border: 2px solid #24262d; }
+  background-color: #fff;
+  border: 2px solid #fff; }
 
 .wizard2 .nav-link:hover {
-  color: #c0c4c8 !important; }
+  color: #333 !important; }
 
 .wizard2 .nav-link.active i {
-  background-color: #24262d;
+  background-color: #2e5aef;
   border-color: #fff;
   color: #fff !important; }
 
@@ -1119,7 +1082,7 @@ select[multiple], select[size] {
 
 /*========================  Form Tab Css ===============================*/
 .form-tab .nav .nav-link.active, .form-tab2 .nav .nav-link.active {
-  background-color: #24262d;
+  background-color: #2e5aef;
   color: #a6baff; }
   .form-tab .nav .nav-link.active h1, .form-tab .nav .nav-link.active h6, .form-tab2 .nav .nav-link.active h1, .form-tab2 .nav .nav-link.active h6 {
     color: #fff; }
@@ -1129,7 +1092,7 @@ select[multiple], select[size] {
     right: -20px;
     border-top: 33px solid transparent;
     border-bottom: 32px solid transparent;
-    border-left: 22px solid #24262d;
+    border-left: 22px solid #2e5aef;
     top: 0px; }
 
 .form-tab2 .media-body {
@@ -1139,23 +1102,23 @@ select[multiple], select[size] {
   color: #fff !important; }
 
 .form-tab2 .nav-link.active {
-  background-color: #24262d !important; }
+  background-color: #fff !important; }
   .form-tab2 .nav-link.active .media-body {
     color: #878787; }
   .form-tab2 .nav-link.active h1, .form-tab2 .nav-link.active h6 {
-    color: #c0c4c8 !important; }
+    color: #333 !important; }
   .form-tab2 .nav-link.active:after {
     content: "";
-    border-left: 22px solid #24262d !important; }
+    border-left: 22px solid #fff !important; }
 
 .form-tab2 .form-control {
   color: #fff !important; }
 
 /*========================  Accordian Css ===============================*/
 #accordion [aria-expanded="true"] {
-  background-color: #24262d;
+  background-color: #2e5aef;
   color: #fff;
-  border-color: #24262d !important; }
+  border-color: #2e5aef !important; }
 
 #accordion a.collapsed:after {
   content: "\f105"; }
@@ -1167,7 +1130,7 @@ select[multiple], select[size] {
 
 #accordion .card-body {
   border-top: none !important;
-  border: solid 1px #3d404c; }
+  border: solid 1px #e6e6e6; }
 
 #accordion2 a {
   line-height: 50px; }
@@ -1180,12 +1143,12 @@ select[multiple], select[size] {
     width: 50px;
     margin-right: 15px;
     text-align: center;
-    background-color: #24262d;
+    background-color: #2e5aef;
     color: #fff; }
 
 #accordion2 .card-body {
   border-top: none !important;
-  border: solid 1px #3d404c; }
+  border: solid 1px #e6e6e6; }
 
 /*========================  Alert Popover Css ===============================*/
 .sweet-alert .sa-button-container {
@@ -1201,12 +1164,12 @@ select[multiple], select[size] {
 
 /*========================  Pagination Css ===============================*/
 .pagination .page-item.active .page-link {
-  background-color: #24262d;
-  border-color: #3d4150; }
+  background-color: #2e5aef;
+  border-color: #2e5aef; }
 
 .pagination .page-link {
-  color: #c0c4c8;
-  border-color: #3d404c; }
+  color: #333;
+  border-color: #e6e6e6; }
 
 .btn-search i {
   top: 15px; }
@@ -1216,20 +1179,19 @@ select[multiple], select[size] {
   transition: all 0.3s ease;
   border-width: 2px !important; }
   .btn-tags a:hover {
-    border-color: #24262d !important;
-    color: #24262d; }
+    border-color: #2e5aef !important;
+    color: #2e5aef; }
 
 /*========================  Buttons Dropdown Css ===============================*/
 .dropdown-toggle {
   padding-left: 10px; }
 
 .dropdown-item {
-  border-bottom: solid 1px #3d404c;
-  padding: 5px 10px;
-  color: #949ba2; }
+  border-bottom: solid 1px #e6e6e6;
+  padding: 10px 15px; }
   .dropdown-item:active {
     background-color: #f8f9fa;
-    color: #c0c4c8; }
+    color: #333; }
 
 /*======================== Dropzone Css ===============================*/
 #dropzone [type="file"], .dropzone [type="file"] {
@@ -1314,7 +1276,7 @@ select[multiple], select[size] {
   min-height: 400px !important; }
 
 .bd-example-row span {
-  background-color: #2f323b;
+  background-color: #f6fafb;
   display: block;
   line-height: 50px;
   text-align: center; }
@@ -1325,21 +1287,21 @@ select[multiple], select[size] {
   font-weight: 600; }
 
 .custom-tabs .nav-tabs .nav-link.active, .custom-tabs2 .nav-tabs .nav-link.active {
-  border-color: #3d404c; }
+  border-color: #e6e6e6; }
 
 .custom-tabs2 .nav-tabs {
   border-color: transparent; }
   .custom-tabs2 .nav-tabs .nav-link {
-    background-color: #1d1c1c; }
+    background-color: #f5f5f5; }
   .custom-tabs2 .nav-tabs .nav-link.active {
-    background-color: #3d404c; }
+    background-color: #fff; }
 
 .custom-tabs2 .tab-content {
   margin-top: -1px; }
 
 /*======================== Mail Compass Css ===============================*/
 .badge-primary {
-  background-color: #24262d; }
+  background-color: #2e5aef; }
 
 .inbox-nav .badge {
   margin-top: 13px; }
@@ -1347,10 +1309,10 @@ select[multiple], select[size] {
 .inbox-nav a {
   transition: all .3s ease; }
   .inbox-nav a:hover {
-    background-color: #353842; }
+    background-color: #f5f5f5; }
 
 .table-inbox .table tbody td {
-  border-top: solid 1px #3d404c !important; }
+  border-top: solid 1px #e6e6e6 !important; }
 
 .table-inbox [type=checkbox] + label:before {
   top: -5px; }
@@ -1377,8 +1339,8 @@ select[multiple], select[size] {
   font-size: 2rem; }
 
 .pricing-table:hover .price-tag, .pricing-table:hover .price-header, .pricing-table:hover .price-header2 {
-  background-color: #24262d;
-  border-color: #24262d !important;
+  background-color: #2e5aef;
+  border-color: #2e5aef !important;
   color: #fff; }
 
 .pricing-table .price-header2 {
@@ -1389,60 +1351,13 @@ select[multiple], select[size] {
 
 .pricing-table .price-header {
   clip-path: polygon(50% 0%, 100% 0, 100% 1%, 50% 100%, 0 1%, 0 0);
-  background-color: #2f323b;
+  background-color: #f6fafb;
   transition: all .3s ease; }
 
 .progress-bar.progress-bar-striped.active {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
   -o-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite; }
-
-/*=========================== Darl */
-.table .thead-light th, .jsgrid-grid-header {
-  color: #949ba2;
-  background-color: #24262d;
-  border-color: #24262d; }
-
-.calendar-top-selector, .calendar-next, .calendar-prev {
-  color: #949ba2; }
-
-/*=================== C3 =======================*/
-.c3-axis-y text {
-  fill: #949ba2;
-  font-size: 12px; }
-
-.c3-axis-x text {
-  font-size: 12px;
-  fill: #949ba2; }
-
-/*=================== Advance Form ====================*/
-div.fancy-select div.trigger, .select2-container .select2-choice, .select2-container .select2-choice .select2-arrow, .select2-container-multi .select2-choices,
-.input-group-addon, .form-control:disabled, .form-control[readonly], .note-editor .note-toolbar,
-.note-editor .btn-default, .note-editor .dropdown-menu,
-.note-editor .dropdown-menu > li > a:focus, .note-editor .dropdown-menu > li > a:hover,
-.note-editor .btn-default.active, .note-editor .btn-default:active, .note-editor .btn-default:focus, .note-editor .btn-default:hover, .open .dropdown-toggle.note-editor .btn-default,
-.note-editor .btn-default.disabled, .note-editor .btn-default.disabled.active, .note-editor .btn-default.disabled:active, .note-editor .btn-default.disabled:focus, .note-editor .btn-default.disabled:hover, .note-editor .btn-default[disabled], .note-editor .btn-default[disabled].active, .note-editor .btn-default[disabled]:active, .note-editor .btn-default[disabled]:focus, .note-editor .btn-default[disabled]:hover, fieldset[disabled] .note-editor .btn-default, fieldset[disabled] .note-editor .btn-default.active, fieldset[disabled] .note-editor .btn-default:active, fieldset[disabled] .note-editor .btn-default:focus, fieldset[disabled] .note-editor .btn-default:hover,
-div.dataTables_wrapper div.dataTables_filter input, div.dataTables_wrapper div.dataTables_length select, .jsgrid-edit-row > .jsgrid-cell,
-.jsgrid-edit-row input, .jsgrid-edit-row select, .jsgrid-edit-row textarea, .jsgrid-filter-row input, .jsgrid-filter-row select, .jsgrid-filter-row textarea, .jsgrid-insert-row input, .jsgrid-insert-row select, .jsgrid-insert-row textarea {
-  border-color: #3d404c;
-  color: #fff;
-  background: #2f323b; }
-
-div.fancy-select div.trigger:hover, .select2-container .select2-choice:hover, .select2-container .select2-choice .select2-arrow:hover, .select2-container-multi .select2-choices:hover {
-  border-color: #3d404c;
-  color: #fff;
-  background: #2f323b; }
-
-.slider-track-left, .slider-track-right {
-  color: #fff;
-  background: #24262d; }
-
-.note-editor .dropdown-menu > li > a {
-  color: #fff; }
-
-code {
-  color: #fff;
-  background-color: #2f323b; }
 
 @media (min-width: 1200px) {
   .container {

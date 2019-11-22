@@ -20,8 +20,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-lg-3 col-xl-2 align-self-center">
-                        <div class="site-logo">
-                            <a href=""><img src="{{asset('/images/danilogo.JPG')}}" height="60" alt=""/></a>
+                        <div class="site-logo ml-5">
+                            <a href=""><img src="{{asset('/images/djdani.JPG')}}"  height="70" width="70" alt=""/></a>
                         </div>
                         <div class="navbar-header">
                             <button type="button" id="sidebarCollapse" class="navbar-btn bg-transparent float-right">
@@ -70,7 +70,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-md-2 align-self-center my-3 my-lg-0">
-                        <h6 class="text-uppercase redial-font-weight-700 redial-light mb-0 pl-2">Dashboard</h6>
+                        <h6 class="text-uppercase redial-font-weight-700 redial-light mb-0 pl-2"></h6>
                     </div>
 
 

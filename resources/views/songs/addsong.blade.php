@@ -22,7 +22,7 @@
                         <label class="redial-font-weight-600 d-block">File Input</label>
                         <input type="file" name="file[]" multiple='true' class="form-control">
                     </div>
-                    <button class="btn btn-success">Add Song</button>
+                    <button class="btn btn-primary">Add Song</button>
 
             </form>
         </div>

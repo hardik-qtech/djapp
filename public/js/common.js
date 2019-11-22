@@ -9,17 +9,8 @@
         $(this).css('background-image', 'url(' + imgURL + ')');
     });
 
-    /*========================= Dynamic Field ======================*/
-/*==============================================================
-     Tab Next Previous 
-     ============================================================= */
-    $('.tab-next').on('click', function () {        
-     
-        var $tab= $(this).attr('data-tab');
-        $('.'+$tab).click();
-        return false;
+/*========================= Dynamic Field ======================*/
 
-    });
     var bookIndex = 0;
 
     $('#bookForm')
@@ -50,7 +41,16 @@
                 // Remove element containing the fields
                 $row.remove();
             });
+/*==============================================================
+     Tab Next Previous 
+     ============================================================= */
+    $('.tab-next').on('click', function () {        
+     
+        var $tab= $(this).attr('data-tab');
+        $('.'+$tab).click();
+        return false;
 
+    });
     /*==============================================================
      Sidechat 
      ============================================================= */
@@ -79,16 +79,16 @@
         }, 600);
         return false;
     });
-    /*==============================================================
-     Counter
-     =============================================================*/
-    $('.counter_number').counterUp({
-        delay: 1,
-        time: 1600
-    });
-    /*==============================================================
-     Masonry
-     =============================================================*/
+/*==============================================================
+ Counter
+ =============================================================*/
+$('.counter_number').counterUp({
+    delay: 1,
+    time: 1600
+});
+/*==============================================================
+ Masonry
+ =============================================================*/
 
     var $container = $('.portfolio-box');
     $container.imagesLoaded(function () {
@@ -109,16 +109,17 @@
         }); //end shown
     });  //end each
 
-    /*==============================================================
-     Editable table
-     =============================================================*/
+/*==============================================================
+ Editable table
+ =============================================================*/
 
     var clients = [
         {"Name": "Eddy lobonowsky", "Work": "Perform Cms", "date": "1 year ago", "Teg": "Design"},
         {"Name": "Kerem Suar", "Work": "Backup data base", "date": "5 min ago", "Teg": "Meeting"},
         {"Name": "Jawod $", "Work": "Month Report", "date": "1 days ago", "Teg": "Project"},
         {"Name": "Julien", "Work": "Account Password", "date": "2 year ago", "Teg": "Income"},
-        {"Name": "Eddy lobonowsky", "Work": "Perform Cms", "date": "1 year ago", "Teg": "Design"}
+        {"Name": "Eddy lobonowsky", "Work": "Perform Cms", "date": "1 year ago", "Teg": "Design"},
+        {"Name": "Kerem Suar", "Work": "Backup data base", "date": "5 min ago", "Teg": "Meeting"},
     ];
 
     $("#jsGrid").jsGrid({
@@ -131,29 +132,31 @@
         fields: [
             {name: "Name", type: "text", width: 180, validate: "required"},
             {name: "Work", type: "text", width: 150},
+            {name: "date", type: "text", width: 100},
+            {name: "Teg", type: "text", width: 100},
             {type: "control", width: 100}
         ]
     });
-    /*==============================================================
-     Slimscroll Chat
-     =============================================================*/
+/*==============================================================
+ Slimscroll Chat
+ =============================================================*/
+  
+        $('.scrollerchat').slimScroll({
+            height: '456px'
+        });
 
-    $('.scrollerchat').slimScroll({
-        height: '456px'
-    });
-
-
-    $('.sidebar-scrollarea').slimScroll({
-        height: '100vh'
-    });
-
+ 
+        $('.sidebar-scrollarea').slimScroll({
+            height: '100vh'
+        });
+   
     $('#mysideTabContent').slimScroll({
         height: '100vh'
     });
 
-    /*==============================================================
-     Testimonial
-     =============================================================*/
+/*==============================================================
+ Testimonial
+ =============================================================*/
     $("#testimonial").owlCarousel({
         items: 1,
         pagination: true,
@@ -161,31 +164,31 @@
     });
 
 
-    /*==============================================================
-     Image Lightbox Gallery
-     =============================================================*/
-    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-    });
+/*==============================================================
+ Image Lightbox Gallery
+ =============================================================*/
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
 
-    /*==============================================================
-     Table Progress
-     =============================================================*/
+/*==============================================================
+ Table Progress
+ =============================================================*/
 
     $('.progress').barfiller({barColor: '#1e1e1e'});
 
 
-    /*==============================================================
-     Data Table Js
-     =============================================================*/
+/*==============================================================
+ Data Table Js
+ =============================================================*/
 
     $('#example').DataTable();
 
 
-    /*==============================================================
-     DropZone 
-     =============================================================*/
+/*==============================================================
+ DropZone 
+ =============================================================*/
 
 
     $('#dropzone').on('dragover', function () {
@@ -226,14 +229,14 @@
         }
     });
 
-    /*==============================================================
-     Calendar
-     =============================================================*/
-    $('#calendar-demo').dcalendar(); //creates the calendar
+/*==============================================================
+ Calendar
+ =============================================================*/
+$('#calendar-demo').dcalendar(); //creates the calendar
 
-    /*==============================================================
-     Jq-Meter Progress Bar 
-     =============================================================*/
+/*==============================================================
+ Jq-Meter Progress Bar 
+ =============================================================*/
 
     $('#jqmeter-horizontal').jQMeter({goal: '$10,000', raised: '9000', width: '100%', height: '10px', barColor: '#1e1e1e', animationSpeed: 1000, displayTotal: false});
     $('#jqmeter-horizonta2').jQMeter({goal: '$10,000', raised: '8000', width: '100%', height: '10px', bgColor: '#e1e1e1', animationSpeed: 1000, displayTotal: false});
@@ -244,93 +247,93 @@
     $('#jqmeter-horizonta7').jQMeter({goal: '$10,000', raised: '3000', width: '100%', height: '10px', barColor: '#1e1e1e', animationSpeed: 1000, displayTotal: false});
 
 
-    /*==============================================================
-     Line Progress Bar
-     =============================================================*/
-    $('#demoprogressbar1').LineProgressbar({
-        percentage: 25,
-        fillBackgroundColor: '#1e1e1e',
-        height: '5px'
-    });
+/*==============================================================
+ Line Progress Bar
+ =============================================================*/
+$('#demoprogressbar1').LineProgressbar({
+    percentage: 25,
+    fillBackgroundColor: '#1e1e1e',
+    height: '5px'
+});
 
-    $('#demoprogressbar2').LineProgressbar({
-        percentage: 15,
-        fillBackgroundColor: '#1e1e1e',
-        height: '5px'
-    });
+$('#demoprogressbar2').LineProgressbar({
+    percentage: 15,
+    fillBackgroundColor: '#1e1e1e',
+    height: '5px'
+});
 
-    $('#demoprogressbar3').LineProgressbar({
-        percentage: 30,
-        fillBackgroundColor: '#1e1e1e',
-        height: '5px'
-    });
+$('#demoprogressbar3').LineProgressbar({
+    percentage: 30,
+    fillBackgroundColor: '#1e1e1e',
+    height: '5px'
+});
 
-    $('#demoprogressbar4').LineProgressbar({
-        percentage: 5,
-        fillBackgroundColor: '#1e1e1e',
-        height: '5px'
-    });
+$('#demoprogressbar4').LineProgressbar({
+    percentage: 5,
+    fillBackgroundColor: '#1e1e1e',
+    height: '5px'
+});
 
 
 
-    /*==============================================================
-     Map
-     =============================================================*/
-    //Map
-    $('#world-map').vectorMap({
-        map: 'world_mill_en',
-        scaleColors: ['#666', '#35528c'],
-        normalizeFunction: 'polynomial',
-        focusOn: {
-            x: 0.5,
-            y: 0.5,
-            scale: 1.0
-        },
-        zoomMin: 0.85,
-        markerStyle: {
-            initial: {
-                fill: '#f6a821',
-                stroke: '#f6a821',
-            }
-        },
-        backgroundColor: 'transparent',
-        regionStyle: {
-            initial: {
-                fill: '#000',
-                "fill-opacity": 1,
-                stroke: '#f6a821',
-                "stroke-width": 0,
-                "stroke-opacity": 0
+/*==============================================================
+ Map
+ =============================================================*/
+        //Map
+        $('#world-map').vectorMap({
+            map: 'world_mill_en',
+            scaleColors: ['#666', '#35528c'],
+            normalizeFunction: 'polynomial',
+            focusOn: {
+                x: 0.5,
+                y: 0.5,
+                scale: 1.0
             },
-            hover: {
-                "fill-opacity": 0.8
+            zoomMin: 0.85,
+            markerStyle: {
+                initial: {
+                    fill: '#0c3de3',
+                    stroke: '#0c3de3',
+                }
             },
-            selected: {
-                fill: 'yellow'
-            }
-        },
-        markers: [
-            //http://www.latlong.net/
-            {latLng: [51.507351, -0.127758], name: 'London'},
-            {latLng: [41.385064, 2.173403], name: 'Barcelona'},
-            {latLng: [40.712784, -74.005941], name: 'New York'},
-            {latLng: [-22.911632, -43.188286], name: 'Rio De Janeiro'},
-            {latLng: [49.282729, -123.120738], name: 'Vancuver'},
-            {latLng: [35.689487, 139.691706], name: 'Tokio'},
-            {latLng: [55.755826, 37.617300], name: 'Moskva'},
-            {latLng: [43.214050, 27.914733], name: 'Varna'},
-            {latLng: [30.044420, 31.235712], name: 'Cairo'}
-        ]
-    });
+            backgroundColor: '#fff',
+            regionStyle: {
+                initial: {
+                    fill: '#2e5aef',
+                    "fill-opacity": 1,
+                    stroke: '#2e5aef',
+                    "stroke-width": 0,
+                    "stroke-opacity": 0
+                },
+                hover: {
+                    "fill-opacity": 0.8
+                },
+                selected: {
+                    fill: 'yellow'
+                }
+            },
+            markers: [
+                //http://www.latlong.net/
+                {latLng: [51.507351, -0.127758], name: 'London'},
+                {latLng: [41.385064, 2.173403], name: 'Barcelona'},
+                {latLng: [40.712784, -74.005941], name: 'New York'},
+                {latLng: [-22.911632, -43.188286], name: 'Rio De Janeiro'},
+                {latLng: [49.282729, -123.120738], name: 'Vancuver'},
+                {latLng: [35.689487, 139.691706], name: 'Tokio'},
+                {latLng: [55.755826, 37.617300], name: 'Moskva'},
+                {latLng: [43.214050, 27.914733], name: 'Varna'},
+                {latLng: [30.044420, 31.235712], name: 'Cairo'}
+            ]
+        });
 
-    /*==============================================================
-     Spark LIne Chart
-     =============================================================*/
+/*==============================================================
+ Spark LIne Chart
+ =============================================================*/
     $(".spark1").sparkline([5, 6, 7, 9, 9, 5, 3, 2, 2, 4, 6, 7, 5, 6, 7, 9, 9, 5, 3, 2, 2, 4, 6, 7], {
         type: 'line',
         width: '178',
         height: '40',
-        lineColor: '#f6a821',
+        lineColor: '#2347fc',
         fillColor: 'transparent',
         lineWidth: 2,
         spotColor: 'transparent',
@@ -366,7 +369,7 @@
         type: 'line',
         width: '100',
         height: '21',
-        lineColor: '#f6a821',
+        lineColor: '#426af1',
         fillColor: 'transparent',
         lineWidth: 2,
         spotColor: 'transparent',
@@ -391,7 +394,7 @@
         barWidth: 3,
         barSpacing: 10,
         height: '66',
-        barColor: '#f6a821'});
+        barColor: '#426af1'});
 
     $(".spark7").sparkline([70, 60, 65, 60, 50, 60, 70], {
         type: 'bar',
@@ -445,9 +448,9 @@
         height: '24',
         barColor: '#3fbcef'});
 
-    /*==============================================================
-     Form Text Editor
-     =============================================================*/
+/*==============================================================
+ Form Text Editor
+ =============================================================*/
 
     $('.summernote').summernote();
     var edit = function () {
@@ -458,9 +461,9 @@
         $('.click2edit').destroy();
     };
 
-    /*==============================================================
-     Toastr Alert Js
-     =============================================================*/
+/*==============================================================
+ Toastr Alert Js
+ =============================================================*/
     toastr.options = {
         "debug": false,
         "newestOnTop": false,
@@ -482,9 +485,9 @@
     });
 
 
-    /*==============================================================
-     Tree View Js
-     =============================================================*/
+/*==============================================================
+ Tree View Js
+ =============================================================*/
 
     $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
     $('.tree li.parent_li > span').on('click', function (e) {
@@ -499,606 +502,600 @@
         e.stopPropagation();
     });
 
-    /*==============================================================
-     Alert Popup Js
-     =============================================================*/
-    if ($('.sweet-1').length > 0)
-    {
-        document.querySelector('.sweet-1').onclick = function () {
-            swal("Here's a message!");
-        };
-    }
+/*==============================================================
+ Alert Popup Js
+ =============================================================*/
+if ($('.sweet-1').length > 0)
+{
+    document.querySelector('.sweet-1').onclick = function () {
+        swal("Here's a message!");
+    };
+}
 
-    if ($('.sweet-2').length > 0)
-    {
-        document.querySelector('.sweet-2').onclick = function () {
-            swal("Here's a message!", "It's pretty, isn't it?")
-        };
-    }
-    if ($('.sweet-3').length > 0)
-    {
-        document.querySelector('.sweet-3').onclick = function () {
-            swal("Here's a message!", "Custom HTML Message!!")
-        };
-    }
-    if ($('.sweet-4').length > 0)
-    {
-        document.querySelector('.sweet-4').onclick = function () {
-            swal("Good job!", "You clicked the button!", "success");
-        };
-    }
-    if ($('.sweet-5').length > 0)
-    {
-        document.querySelector('.sweet-5').onclick = function () {
-            swal({
-                title: "Are you sure?",
-                text: "You clicked the button!",
-                type: "info",
-                confirmButtonClass: 'btn-primary',
-            });
-        };
-    }
-    if ($('.sweet-6').length > 0)
-    {
-        document.querySelector('.sweet-6').onclick = function () {
-            swal({
-                title: "Are you sure?",
-                text: "You clicked the button!",
-                type: "warning",
-                confirmButtonClass: 'btn-primary',
-            });
-        };
-    }
-    if ($('.sweet-7').length > 0)
-    {
-        document.querySelector('.sweet-7').onclick = function () {
-            swal({
-                title: "Are you sure?",
-                text: "You clicked the button!",
-                type: "error",
-                confirmButtonClass: 'btn-primary',
-            });
-        };
-    }
-    if ($('.sweet-8').length > 0)
-    {
-        document.querySelector('.sweet-8').onclick = function () {
-            swal({
-                title: "Sweet!",
-                text: "Here's a custom image.",
-                imageUrl: 'dist/images/thumbs-up.jpg'
-            });
-        };
-    }
-    if ($('.sweet-9').length > 0)
-    {
-        document.querySelector('.sweet-9').onclick = function () {
-            swal({
-                title: "Auto close alert!",
-                text: "I will close in 3 seconds.",
-                timer: 2000,
-                showConfirmButton: true
-            });
-        };
-    }
-    if ($('.sweet-10').length > 0)
-    {
-        document.querySelector('.sweet-10').onclick = function () {
-            swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: false,
-                confirmButtonClass: 'btn-primary',
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: "No, cancel plx!",
-                closeOnConfirm: false,
-                closeOnCancel: false
-            },
-                    function (isConfirm) {
-                        if (isConfirm) {
-                            swal("Deleted!", "Your imaginary file has been deleted!", "success");
-                        } else {
-                            swal("Cancelled", "Your imaginary file is safe :)", "error");
-                        }
-                    });
-        };
-    }
-    if ($('.sweet-11').length > 0)
-    {
-        document.querySelector('.sweet-11').onclick = function () {
-            swal({
-                title: "",
-                text: 'Write something interesting:',
-                type: 'input',
-                showCancelButton: false,
-                closeOnConfirm: false,
-                animation: "slide-from-top",
-                inputPlaceholder: "Write something",
-            },
-                    function (inputValue) {
-                        if (inputValue === false)
-                            return false;
-                        if (inputValue === "") {
-                            swal.showInputError("You need to write something!");
-                            return false;
-                        }
-                        swal("Nice!", 'You wrote: ' + inputValue, "success");
-                    });
-        };
-    }
-    if ($('.sweet-12').length > 0)
-    {
-        document.querySelector('.sweet-12').onclick = function () {
-            swal({
-                title: "Ajax request example",
-                text: "Submit to run ajax request",
-                type: "info",
-                showCancelButton: false,
-                closeOnConfirm: false,
-                showLoaderOnConfirm: true
-            }, function () {
-                setTimeout(function () {
-                    swal("Ajax request finished!");
-                }, 2000);
-            });
-        };
-    }
-    if ($('.sweet-13').length > 0)
-    {
-        document.querySelector('.sweet-13').onclick = function () {
-            swal({
-                title: "Message",
-                text: 'A Custom <span style="color:#2e5aef">Html<span> Message.',
-                html: true
-            });
-        };
-    }
-
-    /*========================================================
-     * 
-     * Moriss
-     */
-    if ($('#morris-area-chart2').length > 0)
-    {
-        Morris.Area({
-            element: 'morris-area-chart2',
-            data: [{
-                    period: '2010',
-                    SiteA: 0,
-                    SiteB: 0,
-                }, {
-                    period: '2011',
-                    SiteA: 130,
-                    SiteB: 100,
-                }, {
-                    period: '2012',
-                    SiteA: 80,
-                    SiteB: 60,
-                }, {
-                    period: '2013',
-                    SiteA: 70,
-                    SiteB: 200,
-                }, {
-                    period: '2014',
-                    SiteA: 180,
-                    SiteB: 150,
-                }, {
-                    period: '2015',
-                    SiteA: 105,
-                    SiteB: 90,
-                },
-                {
-                    period: '2016',
-                    SiteA: 250,
-                    SiteB: 150,
-                }],
-            xkey: 'period',
-            ykeys: ['SiteA', 'SiteB'],
-            labels: ['Site A', 'Site B'],
-            pointSize: 0,
-            pointStrokeColors: ['#2e5aef', '#0230cb'],
-            behaveLikeLine: true,
-            gridLineColor: '#e0e0e0',
-            lineWidth: 0,
-            smooth: false,
-            hideHover: 'auto',
-            lineColors: ['#f6a821', '#f6a821'],
-            resize: true
-
+if ($('.sweet-2').length > 0)
+{
+    document.querySelector('.sweet-2').onclick = function () {
+        swal("Here's a message!", "It's pretty, isn't it?")
+    };
+}
+if ($('.sweet-3').length > 0)
+{
+    document.querySelector('.sweet-3').onclick = function () {
+        swal("Here's a message!", "Custom HTML Message!!")
+    };
+}
+if ($('.sweet-4').length > 0)
+{
+    document.querySelector('.sweet-4').onclick = function () {
+        swal("Good job!", "You clicked the button!", "success");
+    };
+}
+if ($('.sweet-5').length > 0)
+{
+    document.querySelector('.sweet-5').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You clicked the button!",
+            type: "info",
+            confirmButtonClass: 'btn-primary',
         });
-    }
-    if ($('#morris-area-chart').length > 0)
-    {
-        /// Morris Line chart
-        Morris.Area({
-            element: 'morris-area-chart',
-            data: [{
-                    period: '2010',
-                    iphone: 50,
-                    ipad: 80,
-                    itouch: 20
-                }, {
-                    period: '2011',
-                    iphone: 130,
-                    ipad: 100,
-                    itouch: 80
-                }, {
-                    period: '2012',
-                    iphone: 80,
-                    ipad: 60,
-                    itouch: 70
-                }, {
-                    period: '2013',
-                    iphone: 70,
-                    ipad: 200,
-                    itouch: 140
-                }, {
-                    period: '2014',
-                    iphone: 180,
-                    ipad: 150,
-                    itouch: 140
-                }, {
-                    period: '2015',
-                    iphone: 105,
-                    ipad: 100,
-                    itouch: 80
-                },
-                {
-                    period: '2016',
-                    iphone: 250,
-                    ipad: 150,
-                    itouch: 200
-                }],
-            xkey: 'period',
-            ykeys: ['iphone', 'ipad', 'itouch'],
-            labels: ['iPhone', 'iPad', 'iPod Touch'],
-            pointSize: 3,
-            fillOpacity: 0,
-            pointStrokeColors: ['#2e5aef', '#6881d6', '#16297b'],
-            behaveLikeLine: true,
-            gridLineColor: '#e0e0e0',
-            lineWidth: 1,
-            hideHover: 'auto',
-            lineColors: ['#f6a821', '#f6a821', '#f6a821'],
-            resize: true
-
+    };
+}
+if ($('.sweet-6').length > 0)
+{
+    document.querySelector('.sweet-6').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You clicked the button!",
+            type: "warning",
+            confirmButtonClass: 'btn-primary',
         });
-    }
-    if ($('#extra-area-chart').length > 0)
-    {
-        // Extra chart
-        Morris.Area({
-            element: 'extra-area-chart',
-            data: [{
-                    period: '2010',
-                    iphone: 0,
-                    ipad: 0,
-                    itouch: 0
-                }, {
-                    period: '2011',
-                    iphone: 50,
-                    ipad: 15,
-                    itouch: 5
-                }, {
-                    period: '2012',
-                    iphone: 20,
-                    ipad: 50,
-                    itouch: 65
-                }, {
-                    period: '2013',
-                    iphone: 60,
-                    ipad: 12,
-                    itouch: 7
-                }, {
-                    period: '2014',
-                    iphone: 30,
-                    ipad: 20,
-                    itouch: 120
-                }, {
-                    period: '2015',
-                    iphone: 25,
-                    ipad: 80,
-                    itouch: 40
-                }, {
-                    period: '2016',
-                    iphone: 10,
-                    ipad: 10,
-                    itouch: 10
-                }
-            ],
-            lineColors: ['#f6a821', '#f6a821'],
-            xkey: 'period',
-            ykeys: ['iphone', 'itouch'],
-            labels: ['Site A', 'Site B'],
-            pointStrokeColors: ['#f6a821', '#f6a821'],
-            pointSize: 0,
-            lineWidth: 0,
-            resize: true,
-            behaveLikeLine: true,
-            gridLineColor: '#e0e0e0',
-            hideHover: 'true'
+    };
+}
+if ($('.sweet-7').length > 0)
+{
+    document.querySelector('.sweet-7').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You clicked the button!",
+            type: "error",
+            confirmButtonClass: 'btn-primary',
         });
-    }
-
-    /*=========================================================
-     * 
-     *Chart js
-     */
-    if ($('#placeholder').length > 0)
-    {
-
-        var ctx1 = document.getElementById("placeholder").getContext("2d");
-
-        var data1 = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-                {
-                    label: "My First dataset",
-                    fillColor: "transparent",
-                    strokeColor: "#f6a821",
-                    pointColor: "#f6a821",
-                    data: [65, 59, 80, 81, 56, 55, 40]
-                },
-                {
-                    label: "My Second dataset",
-                    fillColor: "transparent",
-                    strokeColor: "#f6a821",
-                    pointColor: "#d88c08",
-                    data: [28, 48, 40, 19, 86, 27, 90]
-                }
-            ]
-        };
-        var chart1 = new Chart(ctx1).Line(data1, {
-            scaleShowGridLines: true,
-            scaleGridLineColor: "rgba(0,0,0,.05)",
-            scaleGridLineWidth: 1,
-            scaleShowHorizontalLines: true,
-            scaleShowVerticalLines: false,
-            bezierCurve: false,
-            bezierCurveTension: 0.4,
-            pointDot: false,
-            pointDotRadius: 4,
-            pointDotStrokeWidth: 1,
-            pointHitDetectionRadius: 20,
-            datasetStroke: true,
-            datasetStrokeWidth: 2,
-            datasetFill: true,
-            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-            responsive: true,
-            tooltipCornerRadius: 2,
-            scaleOverride: true,
-            scaleSteps: 6,
-            scaleStepWidth: 20,
-            scaleStartValue: 0,
-            scaleFontColor: "#949ba2"
+    };
+}
+if ($('.sweet-8').length > 0)
+{
+    document.querySelector('.sweet-8').onclick = function () {
+        swal({
+            title: "Sweet!",
+            text: "Here's a custom image.",
+            imageUrl: 'dist/images/thumbs-up.jpg'
         });
-
-    }
-    if ($('#canvas1').length > 0)
-    {
-        var ctx2 = document.getElementById("canvas1").getContext("2d");
-        var data2 = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
-            datasets: [
-                {
-                    label: "My First dataset",
-                    fillColor: "#f6a821",
-                    strokeColor: "#f6a821",
-                    highlightFill: "#f6a821",
-                    highlightStroke: "#f6a821",
-                    data: [65, 59, 80, 81, 56, 55, 40]
-                },
-                {
-                    label: "My Second dataset",
-                    fillColor: "#d88c08",
-                    strokeColor: "#d88c08",
-                    highlightFill: "#d88c08",
-                    highlightStroke: "#d88c08",
-                    data: [28, 48, 40, 19, 86, 27, 90]
-                }
-            ]
-        };
-
-        var chart2 = new Chart(ctx2).Bar(data2, {
-            scaleBeginAtZero: true,
-            scaleShowGridLines: true,
-            scaleGridLineColor: "rgba(0,0,0,.05)",
-            scaleGridLineWidth: 1,
-            scaleShowHorizontalLines: true,
-            scaleShowVerticalLines: false,
-            barShowStroke: true,
-            barStrokeWidth: 2,
-            barDatasetSpacing: 1,
-            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-            responsive: true,
-            scaleOverride: true,
-            scaleSteps: 6,
-            scaleStepWidth: 15,
-            scaleStartValue: 0,
-            barValueSpacing: 20,
-            tooltipCornerRadius: 2,
-            scaleFontColor: "#949ba2"
+    };
+}
+if ($('.sweet-9').length > 0)
+{
+    document.querySelector('.sweet-9').onclick = function () {
+        swal({
+            title: "Auto close alert!",
+            text: "I will close in 3 seconds.",
+            timer: 2000,
+            showConfirmButton: true
         });
-
-    }
-    if ($('#redar').length > 0)
-    {
-        var ctx3 = document.getElementById("redar").getContext("2d");
-        var data3 = {
-            labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-            datasets: [
-                {
-                    label: "My First dataset",
-                    fillColor: "rgba(246, 168, 33, 0.2)",
-                    strokeColor: "#f6a821",
-                    pointColor: "#f6a821",
-                    data: [65, 59, 90, 81, 56, 55, 40]
-                },
-                {
-                    label: "My Second dataset",
-                    fillColor: "rgba(246, 168, 33, 0.5)",
-                    strokeColor: "#d88c08",
-                    pointColor: "#d88c08",
-                    data: [28, 48, 40, 19, 96, 27, 100]
-                }
-            ]
-        };
-
-        var myRadarChart = new Chart(ctx3).Radar(data3, {
-            scaleShowLine: true,
-            angleShowLineOut: true,
-            scaleShowLabels: false,
-            scaleBeginAtZero: true,
-            angleLineColor: "rgba(0,0,0,.1)",
-            angleLineWidth: 1,
-            pointLabelFontFamily: "'Arial'",
-            pointLabelFontStyle: "normal",
-            pointLabelFontSize: 10,
-            pointLabelFontColor: "#949ba2",
-            pointDot: false,
-            pointDotRadius: 3,
-            pointDotStrokeWidth: 1,
-            pointHitDetectionRadius: 20,
-            datasetStroke: true,
-            datasetStrokeWidth: 2,
-            datasetFill: true,
-            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\; color:#949ba2\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-            responsive: true,
-            tooltipCornerRadius: 2,
-            scaleOverride: true,
-            scaleSteps: 6,
-            scaleStepWidth: 15,
-            scaleStartValue: 0,
-            scaleFontColor: "#949ba2"
+    };
+}
+if ($('.sweet-10').length > 0)
+{
+    document.querySelector('.sweet-10').onclick = function () {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: false,
+            confirmButtonClass: 'btn-primary',
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        swal("Deleted!", "Your imaginary file has been deleted!", "success");
+                    } else {
+                        swal("Cancelled", "Your imaginary file is safe :)", "error");
+                    }
+                });
+    };
+}
+if ($('.sweet-11').length > 0)
+{
+    document.querySelector('.sweet-11').onclick = function () {
+        swal({
+            title: "",
+            text: 'Write something interesting:',
+            type: 'input',
+            showCancelButton: false,
+            closeOnConfirm: false,
+            animation: "slide-from-top",
+            inputPlaceholder: "Write something",
+        },
+                function (inputValue) {
+                    if (inputValue === false)
+                        return false;
+                    if (inputValue === "") {
+                        swal.showInputError("You need to write something!");
+                        return false;
+                    }
+                    swal("Nice!", 'You wrote: ' + inputValue, "success");
+                });
+    };
+}
+if ($('.sweet-12').length > 0)
+{
+    document.querySelector('.sweet-12').onclick = function () {
+        swal({
+            title: "Ajax request example",
+            text: "Submit to run ajax request",
+            type: "info",
+            showCancelButton: false,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true
+        }, function () {
+            setTimeout(function () {
+                swal("Ajax request finished!");
+            }, 2000);
         });
-    }
-    if ($('#pie').length > 0)
-    {
-        var ctx4 = document.getElementById("pie").getContext("2d");
-        var data4 = [
-            {
-                value: 300,
-                color: "#f6a821",
-                highlight: "#f6a821",
-                label: "Light blue"
+    };
+}
+if ($('.sweet-13').length > 0)
+{
+    document.querySelector('.sweet-13').onclick = function () {
+        swal({
+            title: "Message",
+            text: 'A Custom <span style="color:#2e5aef">Html<span> Message.',
+            html: true
+        });
+    };
+}
+
+/*========================================================
+ * 
+ * Moriss
+ */
+if ($('#morris-area-chart2').length > 0)
+{
+    Morris.Area({
+        element: 'morris-area-chart2',
+        data: [{
+                period: '2010',
+                SiteA: 0,
+                SiteB: 0,
+            }, {
+                period: '2011',
+                SiteA: 130,
+                SiteB: 100,
+            }, {
+                period: '2012',
+                SiteA: 80,
+                SiteB: 60,
+            }, {
+                period: '2013',
+                SiteA: 70,
+                SiteB: 200,
+            }, {
+                period: '2014',
+                SiteA: 180,
+                SiteB: 150,
+            }, {
+                period: '2015',
+                SiteA: 105,
+                SiteB: 90,
             },
             {
-                value: 50,
-                color: "#d88c08",
-                highlight: "#d88c08",
-                label: "blue light"
+                period: '2016',
+                SiteA: 250,
+                SiteB: 150,
+            }],
+        xkey: 'period',
+        ykeys: ['SiteA', 'SiteB'],
+        labels: ['Site A', 'Site B'],
+        pointSize: 0,
+        pointStrokeColors: ['#2e5aef', '#0230cb'],
+        behaveLikeLine: true,
+        gridLineColor: '#e0e0e0',
+        lineWidth: 0,
+        smooth: false,
+        hideHover: 'auto',
+        lineColors: ['#2e5aef', '#0230cb'],
+        resize: true
+
+    });
+}
+if ($('#morris-area-chart').length > 0)
+{
+    /// Morris Line chart
+    Morris.Area({
+        element: 'morris-area-chart',
+        data: [{
+                period: '2010',
+                iphone: 50,
+                ipad: 80,
+                itouch: 20
+            }, {
+                period: '2011',
+                iphone: 130,
+                ipad: 100,
+                itouch: 80
+            }, {
+                period: '2012',
+                iphone: 80,
+                ipad: 60,
+                itouch: 70
+            }, {
+                period: '2013',
+                iphone: 70,
+                ipad: 200,
+                itouch: 140
+            }, {
+                period: '2014',
+                iphone: 180,
+                ipad: 150,
+                itouch: 140
+            }, {
+                period: '2015',
+                iphone: 105,
+                ipad: 100,
+                itouch: 80
             },
             {
-                value: 100,
-                color: "#976309",
-                highlight: "#976309",
-                label: "Dark Blue"
+                period: '2016',
+                iphone: 250,
+                ipad: 150,
+                itouch: 200
+            }],
+        xkey: 'period',
+        ykeys: ['iphone', 'ipad', 'itouch'],
+        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        pointSize: 3,
+        fillOpacity: 0,
+        pointStrokeColors: ['#2e5aef', '#6881d6', '#16297b'],
+        behaveLikeLine: true,
+        gridLineColor: '#e0e0e0',
+        lineWidth: 1,
+        hideHover: 'auto',
+        lineColors: ['#2e5aef', '#6881d6', '#16297b'],
+        resize: true
+
+    });
+}
+if ($('#extra-area-chart').length > 0)
+{
+    // Extra chart
+    Morris.Area({
+        element: 'extra-area-chart',
+        data: [{
+                period: '2010',
+                iphone: 0,
+                ipad: 0,
+                itouch: 0
+            }, {
+                period: '2011',
+                iphone: 50,
+                ipad: 15,
+                itouch: 5
+            }, {
+                period: '2012',
+                iphone: 20,
+                ipad: 50,
+                itouch: 65
+            }, {
+                period: '2013',
+                iphone: 60,
+                ipad: 12,
+                itouch: 7
+            }, {
+                period: '2014',
+                iphone: 30,
+                ipad: 20,
+                itouch: 120
+            }, {
+                period: '2015',
+                iphone: 25,
+                ipad: 80,
+                itouch: 40
+            }, {
+                period: '2016',
+                iphone: 10,
+                ipad: 10,
+                itouch: 10
             }
-        ];
+        ],
+        lineColors: ['#2e5aef', '#0230cb'],
+        xkey: 'period',
+        ykeys: ['iphone', 'itouch'],
+        labels: ['Site A', 'Site B'],
+        pointStrokeColors: ['#2e5aef', '#0230cb'],
+        pointSize: 0,
+        lineWidth: 0,
+        resize: true,
+        behaveLikeLine: true,
+        gridLineColor: '#e0e0e0',
+        hideHover: 'true'
+    });
+}
 
-        var myPieChart = new Chart(ctx4).Pie(data4, {
-            segmentShowStroke: true,
-            segmentStrokeColor: "#fff",
-            segmentStrokeWidth: 2,
-            animationSteps: 100,
-            animationEasing: "easeOutBounce",
-            animateRotate: true,
-            animateScale: false,
-            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
-            responsive: true,
-            tooltipCornerRadius: 2,
-            scaleFontColor: "#949ba2"
-        });
-    }
-
-    /*===========================================================
-     * 
-     * Advance Custom Form
-     */
-//------------- Fancy select -------------//
-    $('.fancy-select').fancySelect();
-//custom templating
-    $('.fancy-select1').fancySelect({
-        optionTemplate: function (optionEl) {
-            return optionEl.text() + '<i class="pull-left ' + optionEl.data('icon') + '"></i>';
-        }
+/*=========================================================
+ * 
+ *Chart js
+ */
+if ($('#placeholder').length > 0)
+{
+    var ctx1 = document.getElementById("placeholder").getContext("2d");
+    var data1 = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "transparent",
+                strokeColor: "#577bf4",
+                pointColor: "#577bf4",
+                data: [65, 59, 80, 81, 56, 55, 40]
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "transparent",
+                strokeColor: "#2e5aef",
+                pointColor: "#2e5aef",
+                data: [28, 48, 40, 19, 86, 27, 90]
+            }
+        ]
+    };
+    var chart1 = new Chart(ctx1).Line(data1, {
+        scaleShowGridLines: true,
+        scaleGridLineColor: "rgba(0,0,0,.05)",
+        scaleGridLineWidth: 1,
+        scaleShowHorizontalLines: true,
+        scaleShowVerticalLines: false,
+        bezierCurve: false,
+        bezierCurveTension: 0.4,
+        pointDot: false,
+        pointDotRadius: 4,
+        pointDotStrokeWidth: 1,
+        pointHitDetectionRadius: 20,
+        datasetStroke: true,
+        datasetStrokeWidth: 2,
+        datasetFill: true,
+        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+        responsive: true,
+        tooltipCornerRadius: 2,
+        scaleOverride: true,
+        scaleSteps: 6,
+        scaleStepWidth: 20,
+        scaleStartValue: 0
     });
 
-//------------- Select 2 -------------//
-    $('.select2').select2({placeholder: 'Select state'});
-
-//minumum 2 symbols input
-    $('.select2-minimum').select2({
-        placeholder: 'Select state',
-        minimumInputLength: 2
-    });
-
-// BOOTSTRAP SLIDER CTRL
-    $('[data-ui-slider]').slider();
-// MASKED
-    $('[data-masked]').inputmask();
-    /*==============================================================
-     Followers Circle
-     =============================================================*/
-    var colors = [
-        ['#6a80b2', '#fafafd'], ['#de2c2d', '#fafafd'], ['#06a8eb', '#fafafd'], ['#c62129', '#fafafd'], ['#0179b5', '#fafafd'], ['#e670a2', '#fafafd']
-    ],
-            circles = [];
-
-    for (var i = 1; i <= 6; i++) {
-        if ($('#circles-' + i).length > 0)
-        {
-            var child = document.getElementById('circles-' + i),
-                    percentage = 25 + (i * 9),
-                    circle = Circles.create({
-                        id: child.id,
-                        value: percentage,
-                        radius: getWidth(),
-                        width: 15,
-                        colors: colors[i - 1]
-                    });
-            circles.push(circle);
-        }
-    }
-    window.onresize = function (e) {
-        for (var i = 0; i < circles.length; i++) {
-            circles[i].updateRadius(getWidth());
-        }
+}
+if ($('#canvas1').length > 0)
+{
+    var ctx2 = document.getElementById("canvas1").getContext("2d");
+    var data2 = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "#577bf4",
+                strokeColor: "#577bf4",
+                highlightFill: "#577bf4",
+                highlightStroke: "#577bf4",
+                data: [65, 59, 80, 81, 56, 55, 40]
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "#2e5aef",
+                strokeColor: "#2e5aef",
+                highlightFill: "#2e5aef",
+                highlightStroke: "#2e5aef",
+                data: [28, 48, 40, 19, 86, 27, 90]
+            }
+        ]
     };
 
-    function getWidth() {
-        return window.innerWidth / 20;
-    }
+    var chart2 = new Chart(ctx2).Bar(data2, {
+        scaleBeginAtZero: true,
+        scaleShowGridLines: true,
+        scaleGridLineColor: "rgba(0,0,0,.05)",
+        scaleGridLineWidth: 1,
+        scaleShowHorizontalLines: true,
+        scaleShowVerticalLines: false,
+        barShowStroke: true,
+        barStrokeWidth: 2,
+        barDatasetSpacing: 1,
+        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+        responsive: true,
+        scaleOverride: true,
+        scaleSteps: 6,
+        scaleStepWidth: 15,
+        scaleStartValue: 0,
+        barValueSpacing: 20,
+        tooltipCornerRadius: 2
+    });
 
-    /*======================
-     * Google Map
-     */
-    if ($('#markermap').length > 0)
-    {
-        map = new GMaps({
-            el: '#markermap',
-            lat: 34.043333,
-            lng: -78.028333
-
-        });
-        map.addMarker({
-            lat: 34.042,
-            lng: -78.028333,
-            title: 'Marker with InfoWindow',
-            infoWindow: {
-                content:
-                        '\<div class="p-2">' +
-                        '<h5 class="redial-font-weight-700 mb-2">New York</h5>' +
-                        '<ul class="list-unstyled redial-line-height-2_5 mb-0">' +
-                        '<li><i class="fa fa-location-arrow pr-2"></i> 15 New York City</li>' +
-                        '<li><i class="fa fa-phone pr-2"></i> +01-4567-65678</li>' +
-                        '<li><i class="fa fa-clock-o pr-2"></i> Timing: 10am To 5pm  -  Sunday Closed</li>' +
-                        '</ul>' +
-                        '</div>'
+}
+if ($('#redar').length > 0)
+{
+    var ctx3 = document.getElementById("redar").getContext("2d");
+    var data3 = {
+        labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "rgba(46,90,239,0.2)",
+                strokeColor: "#2e5aef",
+                pointColor: "#2e5aef",
+                data: [65, 59, 90, 81, 56, 55, 40]
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(87,123,244,0.2)",
+                strokeColor: "#577bf4",
+                pointColor: "#577bf4",
+                data: [28, 48, 40, 19, 96, 27, 100]
             }
-        });
+        ]
+    };
+
+    var myRadarChart = new Chart(ctx3).Radar(data3, {
+        scaleShowLine: true,
+        angleShowLineOut: true,
+        scaleShowLabels: false,
+        scaleBeginAtZero: true,
+        angleLineColor: "rgba(0,0,0,.1)",
+        angleLineWidth: 1,
+        pointLabelFontFamily: "'Arial'",
+        pointLabelFontStyle: "normal",
+        pointLabelFontSize: 10,
+        pointLabelFontColor: "#666",
+        pointDot: false,
+        pointDotRadius: 3,
+        pointDotStrokeWidth: 1,
+        pointHitDetectionRadius: 20,
+        datasetStroke: true,
+        datasetStrokeWidth: 2,
+        datasetFill: true,
+        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+        responsive: true,
+        tooltipCornerRadius: 2,
+        scaleOverride: true,
+        scaleSteps: 6,
+        scaleStepWidth: 15,
+        scaleStartValue: 0,
+    });
+}
+if ($('#pie').length > 0)
+{
+    var ctx4 = document.getElementById("pie").getContext("2d");
+    var data4 = [
+        {
+            value: 300,
+            color: "#2e5aef",
+            highlight: "#2e5aef",
+            label: "Light blue"
+        },
+        {
+            value: 50,
+            color: "#577bf4",
+            highlight: "#577bf4",
+            label: "blue light"
+        },
+        {
+            value: 100,
+            color: "#0032d9",
+            highlight: "#0032d9",
+            label: "Dark Blue"
+        }
+    ];
+
+    var myPieChart = new Chart(ctx4).Pie(data4, {
+        segmentShowStroke: true,
+        segmentStrokeColor: "#fff",
+        segmentStrokeWidth: 2,
+        animationSteps: 100,
+        animationEasing: "easeOutBounce",
+        animateRotate: true,
+        animateScale: false,
+        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
+        responsive: true,
+        tooltipCornerRadius: 2
+    });
+}
+
+/*===========================================================
+ * 
+ * Advance Custom Form
+ */
+//------------- Fancy select -------------//
+$('.fancy-select').fancySelect();
+//custom templating
+$('.fancy-select1').fancySelect({
+    optionTemplate: function (optionEl) {
+        return optionEl.text() + '<i class="pull-left ' + optionEl.data('icon') + '"></i>';
     }
+});
+
+//------------- Select 2 -------------//
+$('.select2').select2({placeholder: 'Select state'});
+
+//minumum 2 symbols input
+$('.select2-minimum').select2({
+    placeholder: 'Select state',
+    minimumInputLength: 2
+});
+
+// BOOTSTRAP SLIDER CTRL
+$('[data-ui-slider]').slider();
+// MASKED
+$('[data-masked]').inputmask();
+/*==============================================================
+ Followers Circle
+ =============================================================*/
+var colors = [
+    ['#6a80b2', '#fafafd'], ['#de2c2d', '#fafafd'], ['#06a8eb', '#fafafd'], ['#c62129', '#fafafd'], ['#0179b5', '#fafafd'], ['#e670a2', '#fafafd']
+],
+        circles = [];
+
+for (var i = 1; i <= 6; i++) {
+    if ($('#circles-' + i).length > 0)
+    {
+        var child = document.getElementById('circles-' + i),
+                percentage = 25 + (i * 9),
+                circle = Circles.create({
+                    id: child.id,
+                    value: percentage,
+                    radius: getWidth(),
+                    width: 15,
+                    colors: colors[i - 1]
+                });
+        circles.push(circle);
+    }
+}
+window.onresize = function (e) {
+    for (var i = 0; i < circles.length; i++) {
+        circles[i].updateRadius(getWidth());
+    }
+};
+
+function getWidth() {
+    return window.innerWidth / 20;
+}
+
+/*======================
+ * Google Map
+ */
+if ($('#markermap').length > 0)
+{
+    map = new GMaps({
+        el: '#markermap',
+        lat: 34.043333,
+        lng: -78.028333
+
+    });
+    map.addMarker({
+        lat: 34.042,
+        lng: -78.028333,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+            content:
+                    '\<div class="p-2">' +
+                    '<h5 class="redial-font-weight-700 mb-2">New York</h5>' +
+                    '<ul class="list-unstyled redial-line-height-2_5 mb-0">' +
+                    '<li><i class="fa fa-location-arrow pr-2"></i> 15 New York City</li>' +
+                    '<li><i class="fa fa-phone pr-2"></i> +01-4567-65678</li>' +
+                    '<li><i class="fa fa-clock-o pr-2"></i> Timing: 10am To 5pm  -  Sunday Closed</li>' +
+                    '</ul>' +
+                    '</div>'
+        }
+    });
+}
 
 
 
