@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\SongsModel;
+use DB;
 
 class songsController extends Controller
 {
@@ -52,12 +53,12 @@ class songsController extends Controller
     }
     public function artists(Request $request)
     {
-        $artist=SongsModel::with('category')->where('artist',$request->artist)->get();
+        $artist = SongsModel::where('artist', 'LIKE', "%".$request->keyword."%")->groupBy('artist')->get();
 
         if(count($artist)>0)
         {
             return [
-                'msg'=>'list of artist',
+                'msg'=>'List of artists',
                 'status'=>1,
                 'data'=>$artist
             ];
@@ -65,10 +66,35 @@ class songsController extends Controller
         else
         {
             return [
-                'msg'=>'No Artist Available',
+                'msg'=>'No Artists Available',
                 'status'=>0
             ];
         }
+    }
 
+    public function artist_songs(Request $request){
+        try{
+            $artistsongs = SongsModel::with('category')->where('artist', $request->artist)->get();
+
+            if(count($artistsongs) > 0){
+                $response = [
+                    'msg' => 'Available artist songs',
+                    'status' => 1,
+                    'data' => $artistsongs
+                ];
+            }else{
+                $response = [
+                    'msg' => 'No songs available for this artist',
+                    'status' => 0
+                ];
+            }
+        }catch(\Exception $e){
+            $response = [
+                'msg' => $e->getMessage()." ".$e->getFile()." ".$e->getLine(),
+                'status' => 0
+            ];
+        }
+
+        return response()->json($response);
     }
 }
