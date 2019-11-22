@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label class="redial-font-weight-600">Artist Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Artist Name" name="name" />
+                    <input class="form-control" id="search_artist" type="text" placeholder="Search Artist" name="name">
                 </div>
                 <div class="form-group">
                         <label class="redial-font-weight-600 d-block">File Input</label>
@@ -28,4 +28,41 @@
         </div>
     </div>
 
+@endsection
+@section('scripts')
+<script type="text/javascript">
+ $(document).ready(function(){
+
+    $("#search_artist").on("keyup", function(){
+            let keyword = this.value;
+            if(keyword.length >= 3){
+                search_artist(keyword);
+            }
+            else if(keyword.length == 0){
+                document.getElementById("search_results").innerHTML = "";
+                get_songs();
+            }
+        });
+
+    function search_artist(keyword){
+        $.get("http://localhost/DjApp/api/allartist?keyword="+keyword, function( data ) {
+            if(data.status == 1){
+                document.getElementById("search_results").innerHTML = "";
+
+                $.each(data.data, function( index, value ) {
+                    document.getElementById("search_results").innerHTML +=
+                    `<a onclick="artist_songs('${value.artist}');" style="text-decoration:none;">${value.artist}</a><br>`;
+                });
+            }
+            else
+            {
+                document.getElementById("search_results").innerHTML =
+                `<p class="text-muted mt-1 mb-2">No search artist found</p>`;
+            }
+        });
+    }
+
+ });
+
+</script>
 @endsection
